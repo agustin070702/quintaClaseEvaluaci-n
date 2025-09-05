@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --mostrando:  #eaf4f4;
+  --esperando: #a8dadc;
+  --flotando: #a8dadc; 
+  --bg: #f0f0f0;
+  --text: #111111;
+  --card: #eaf4f4;
+  --accent: #457b9d;  //color nombre de usuario 
+
+  --canvas-bg: #e6e6ff;
+}
+
+body{
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  h1, h2 {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.1;
+}
+
+#bloque {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: min(calc(90% - 2rem), 500px);
+    height:auto;
+    padding: 1rem;
+    margin: auto;
+    background: var(--card);
+    border-radius: .5rem;
+    z-index: 9999;
+}
+
+p{
+  padding:0.5rem 0;
+}
+
+nav{
+  margin:1rem 0;  
+}
+
+nav a{
+  line-height: 1;
+  text-decoration: none;
+  color:#111;
+  margin:0 1rem 0 0;
+  padding:0.3rem 1rem;
+  background:var(--esperando);
+  border-radius: .6rem;
+  transition:all ease .75s;
+}
+
+nav a:hover{
+  color:#white;
+  background:var(--flotando);  
+  transition:all ease .75s;
+}
+
+nav a.active{
+  color:black;
+  background:var(--mostrando);
+  border: 2px solid var(--flotando);
+    box-shadow: 0 6px 10px rgba(0,0,0,0.25);
+}
+
+a { color: var(--accent); }
+a:hover { text-decoration: underline; 
+}
+
+img.perfil {
+  width: 180px;        
+  height: 180px;        
+  object-fit: cover;   
+  border-radius: 50%;  
+  display: block;      
+  margin: 0 auto 1rem; 
+}
